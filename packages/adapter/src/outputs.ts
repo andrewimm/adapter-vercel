@@ -881,7 +881,6 @@ export async function handlePrerenderOutputs(
           // if postponed state is not present we write the fallback file above
           !output.fallback.postponedState
         ) {
-          // we use link to avoid copying files un-necessarily
           await copyFile(output.fallback.filePath, prerenderFallbackPath);
         }
 
